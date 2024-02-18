@@ -1,0 +1,121 @@
+body,
+html {
+  font-family: Lato, Helvetica Neue, Helvetica, sans-serif;
+  color: #1c1c1c;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Main To-Do List */
+div#main {
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  gap: 30px;
+  padding: 35px 10vw;
+  height: calc(100vh - 175px);
+  overflow-y: scroll;
+  scrollbar-width: none;
+  background: #fbfcff;
+}
+.div#main::-webkit-scrollbar {
+  display: none;
+}
+
+div.todos-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+div.todo-item {
+  background: #ffffff;
+  display: flex;
+  border: 1px solid #1c1c1c44;
+  border-radius: 15px;
+}
+div.todo-item > .todo-item-left {
+  display: grid;
+  place-items: center;
+  width: 80px;
+  min-height: 80px;
+}
+div.todo-item > .todo-item-left > input {
+  width: 20px;
+  height: 20px;
+}
+div.todo-item > .todo-item-center {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  justify-content: center;
+  flex: 1;
+  border-left: 1px solid #1c1c1c44;
+  border-right: 1px solid #1c1c1c44;
+  padding: 15px 25px;
+}
+div.todo-item > .todo-item-center > h3 {
+  font-size: 1.5em;
+}
+div.todo-item > .todo-item-right {
+  display: grid;
+  place-items: center;
+  width: 80px;
+  min-height: 80px;
+}
+div.todo-item > .todo-item-right > a,
+div.todo-item > .todo-item-right > a > img {
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+}
+div.todo-item > .todo-item-right > a > img {
+  opacity: 0.5;
+}
+div.todo-item > .todo-item-right > a > img:hover {
+  opacity: 1;
+}
+
+div.done {
+  background-color: #1c1c1c05;
+}
+div.done > .todo-item-center > * {
+  color: #1c1c1c44;
+  text-decoration: line-through;
+}
+
+/* Inputs Container Elements */
+div#new-item-inputs {
+  background: #18a99922;
+  height: 175px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+  align-items: center;
+}
+
+div#new-item-inputs > * {
+  width: 600px;
+  border: 1px solid #1c1c1c22;
+  border-radius: 15px;
+  padding: 5px 15px;
+  resize: none;
+}
+
+div#new-item-inputs > button {
+  border: none;
+  padding: 5px 10px;
+  color: #ffffff;
+  background: #0088ff88;
+}
+div#new-item-inputs > button:hover {
+  border: none;
+  padding: 5px 10px;
+  background: #0088ffaa;
+}
