@@ -1,6 +1,5 @@
 body,
 html {
-  font-family: Lato, Helvetica Neue, Helvetica, sans-serif;
   color: #1c1c1c;
 }
 
@@ -8,6 +7,7 @@ html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Lato, Helvetica Neue, Helvetica, sans-serif;
 }
 
 /* Main To-Do List */
@@ -101,7 +101,8 @@ div#new-item-inputs {
 }
 
 div#new-item-inputs > * {
-  width: 600px;
+  width: calc(100vw - 120px);
+  max-width: 600px;
   border: 1px solid #1c1c1c22;
   border-radius: 15px;
   padding: 5px 15px;

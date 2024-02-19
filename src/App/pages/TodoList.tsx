@@ -5,7 +5,7 @@ import { useTodoService } from "../services/todo.service";
 export const TodoList: React.FC = () => {
   const { todos, addTodo, deleteTodo, toggleTodoDone } = useTodoService();
   const [newTodoTitle, setNewTodoTitle] = useState("");
-  const [newTodoDescription, setNewTodoDescription] = useState(""); // Add state for description
+  const [newTodoDescription, setNewTodoDescription] = useState("");
 
   const handleAddTodo = () => {
     if (newTodoTitle.trim() !== "") {
